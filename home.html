@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffcccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+            color: #b30000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9999;
+            padding: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b30000;
+        }
+
+        .home {
+            display: flex;
+            height: 90vh;
+            position: relative;
+        }
+
+        /* Update these lines with your uploaded image paths */
+        .right-bg {
+            background-image: url('image2.jpg'); /* Path to image 2 */
+            background-size: cover;              /* Ensures the image fills the entire container */
+            background-position: center center;  /* Centers image */
+            background-repeat: no-repeat;        /* Prevents the image from repeating */
+            height: 100vh;                       /* Takes full viewport height */
+            width: 100%;                         /* Ensures full width */
+        }
+
+        .home-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .home-text h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #ff9999;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>My Love for You</header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="love-letter.html">Love Letter</a>
+        <a href="quotes.html">Quotes</a>
+        <a href="roses.html">Blooming Roses</a>
+        <a href="questions.html">Questions</a> <!-- Corrected missing quote -->
+        <a href="favconvo.html">FAV conversation</a>
+    </nav>
+
+    <div id="home" class="home">
+        <div class="right-bg"></div> <!-- Only image 2 now -->
+        <div class="home-text">
+            <h1>I Found My Home in You</h1>
+            <p>Because at the end of the day you are the person i want to come home to.You are the person i want to tell how my day went.You are the person i want to share my happiness,sadness,frustration and success with.</p>
+        </div>
+    </div>
+
+    <footer>With Love, Always Yours</footer>
+</body>
+</html>
