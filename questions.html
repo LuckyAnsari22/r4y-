@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - My Love Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .questions {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 2s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        input, textarea, button {
+            margin: 10px auto;
+            width: 90%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff9999;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+        button:hover {
+            background-color: #b30000;
+            transform: scale(1.05);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #ff9999;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+            margin-top: 20px;
+            display: inline-block;
+            animation: fadeIn 3s ease-in-out;
+        }
+        a:hover {
+            background-color: #b30000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="questions">
+        <h2>Questions for You</h2>
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+            <textarea type="text" placeholder="When do you feel the most distant from me?" name="question1"></textarea>
+            <textarea placeholder="What do you love most about us?" name="question2"></textarea>
+            <textarea type="text" placeholder="Your favorite memory together" name="question3"></textarea>
+            <textarea placeholder="What do you love most about me?" name="question4"></textarea>
+            <textarea placeholder="One thing you can give me/say me rn?" name="question5"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="favconvo.html">Go to Fav conversation</a>
+    </div>
+</body>
+</html>
