@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Roses - My Love Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://i.pinimg.com/736x/45/56/9e/45569eac434fb25195c7ed09b485a046.jpg') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+
+        a {
+            position: absolute;
+            bottom: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff9999;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            z-index: 10;
+        }
+        
+        a:hover {
+            background-color: #b30000;
+        }
+
+        .rose {
+            position: absolute;
+            width: 1000px;
+            height: 1000px;
+            background-image: url('https://i.pinimg.com/736x/4b/5b/9e/4b5b9e6335fa0e3ee1b99a314fedd4b9.jpg'); /* You can replace this with a rose image */
+            background-size: center;
+            opacity: 0;
+            animation: bloom 5s infinite ease-in-out;
+        }
+
+        /* Animation for blooming effect */
+        @keyframes bloom {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="questions.html">Go to Questions</a>
+
+    <script>
+        // Function to create blooming roses randomly
+        function createRose() {
+            const rose = document.createElement('div');
+            rose.classList.add('rose');
+            
+            // Randomize position
+            const xPos = Math.random() * window.innerWidth;
+            const yPos = Math.random() * window.innerHeight;
+            rose.style.left = `${xPos}px`;
+            rose.style.top = `${yPos}px`;
+
+            // Randomize animation timing for each rose
+            const animationDuration = Math.random() * 4 + 4; // Duration between 4s and 8s
+            rose.style.animationDuration = `${animationDuration}s`;
+
+            // Add rose to body
+            document.body.appendChild(rose);
+
+            // Remove the rose after its animation is completed
+            setTimeout(() => {
+                rose.remove();
+            }, animationDuration * 1000); // Remove after the animation ends
+        }
+
+        // Create roses at random intervals
+        setInterval(createRose, 500); // Creates a new rose every 500ms
+    </script>
+</body>
+</html>
