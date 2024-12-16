@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #fef7f7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9999;
+            padding: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b30000;
+        }
+
+        .home {
+            display: flex;
+            height: 100vh;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .right-bg {
+            background-image: url('image3.jpg'); /* Path to image 2 */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .envelope {
+            width: 500px; /* Increased size */
+            height: 350px; /* Increased size */
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .envelope .heart {
+            position: absolute;
+            width: 35px; /* Smaller heart */
+            height: 35px; /* Smaller heart */
+            background-color: red;
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: beat 1.5s infinite;
+            cursor: pointer;
+        }
+
+        .envelope .heart::before,
+        .envelope .heart::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .envelope .heart::before {
+            top: -17px;
+            left: 0;
+        }
+
+        .envelope .heart::after {
+            left: 17px;
+            top: 0;
+        }
+
+        .envelope .letter {
+            display: none;
+            padding: 25px;
+            font-size: 1em; /* Smaller font size */
+            color: #333;
+            text-align: left;
+            white-space: pre-wrap;
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        /* Heartbeat animation */
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(45deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="love-letter.html">Love Letter</a>
+        <a href="quotes.html">Quotes</a>
+        <a href="roses.html">Blooming Roses</a>
+        <a href="questions.html">Questions</a>
+    </nav>
+
+    <div id="home" class="home">
+        <div class="right-bg"></div>
+
+        <div class="envelope">
+            <div class="heart" onclick="openLetter()"></div>
+            <div class="letter" id="letter">
+                <h2>My Dearest Rehan,</h2>
+                <p>I don’t know where to begin when I think about us. Our story started back in 6th grade, where we were the best of friends. Time flew by, and then came high school when we drifted apart. I was lost in the whirlwind of competitive exams, and I didn’t realize how much I missed you until that moment when there was this urge of getting deeply understood. That feeling of reconnecting after all those years was like finding a part of myself I didn't know I was missing.</p>
+                <p>The late-night conversations that followed felt like they were sent from the universe itself. I don’t think I’ve ever felt so understood, so connected to someone. The best memory, though, was on my birthday – August 22 – when you stayed on a video call with me till midnight. It was simple, yet it meant the world to me. And then, just two days later, on August 24, we both confessed the feelings we had been harboring for so long.</p>
+                <p>Even though we’re 1000 km apart, I feel like you’re with me every moment. You are, without a doubt, the best thing that has happened to me. I don’t have anyone as good as you in my life, and I want to keep you with me forever.</p>
+                <p>I know you are busy with your exams, and I admire your dedication. But sometimes, I wish you could give me more of your time. I understand that your focus is on your future, but please know that my heart longs for those small moments we share – those times when we talk, laugh, and just be together.</p>
+                <p>You are my world, and I want to be there for you, always. I will be patient, just like I have been, because I believe in us. I believe in the bond we share, and I know no distance can break it.I miss you everyday.BEST PART ABOUT US IS NO ARGUMENT AND MISUNDERSTANDING SO FAR COULD MAKE US APART./p>
+                <p>Here's a poem that captures all my feelings for you:</p>
+                <pre>
+                    A thousand miles, yet you’re so near,
+                    In every thought, in every tear.
+                    Through silent nights and busy days,
+                    You’re the light that guides my ways.
+
+                    We met as friends, hearts intertwined,
+                    In laughter shared, a love defined.
+                    Though life pulled us in different streams,
+                    We found each other in our dreams.
+
+                    The video calls, the quiet nights,
+                    The shared smiles, the heart’s delights.
+                    Though you’re not always by my side,
+                    In your love, I still confide.
+
+                    I’ll wait for you, through thick and thin,
+                    In every chapter, every win.
+                    For love like ours is meant to stay,
+                    No distance can take that away.
+                </pre>
+                <p>I love you more than words can say, and I can’t wait for the day when distance no longer keeps us apart.</p>
+                <p>Forever yours, Lucky</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the love letter when the heart is clicked
+        function openLetter() {
+            const letter = document.getElementById('letter');
+            letter.style.display = 'block';
+            document.querySelector('.heart').style.display = 'none'; // Hide heart after click
+        }
+    </script>
+</body>
+</html>
